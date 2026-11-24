@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f9f6" />
+    <meta name="description" content="dbcr.si — Harshit, Ishan, Naman, Parth, Shiven, Shubh, Somil, and Vinayak." />
+    <title>dbcr.si</title>
+    <link rel="stylesheet" href="games.css" />
+    <script src="countries.js" defer></script>
+    <script src="games-core.js" defer></script>
+    <script src="games.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23191b18'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Arial,sans-serif' font-size='25' font-weight='700' fill='%23d8f36a'%3Ed%3C/text%3E%3C/svg%3E" />
+    <style>
+      :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #191b18; background: #f8f9f6; }
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      .page { width: min(100% - 96px, 1280px); margin: auto; min-height: 100svh; display: flex; flex-direction: column; }
+      header { padding: 32px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #daddd4; gap: 20px; }
+      .brand { font-size: 20px; font-weight: 700; letter-spacing: -1px; }
+      .label { font-family: 'Courier New', monospace; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+      main { flex: 1; padding: 64px 0 70px; }
+      .intro { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 64px; }
+      h1 { font-size: clamp(72px, 13.5vw, 180px); line-height: .9; letter-spacing: -.075em; margin: 0; font-weight: 700; }
+      h1 span { color: #6c7366; }
+      .tagline { font-size: 20px; line-height: 1.5; margin: 0 0 4px; max-width: 220px; }
+      .section-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+      h2 { font-size: 14px; font-weight: 400; margin: 0; letter-spacing: .08em; text-transform: uppercase; }
+      .count { background: #d8f36a; padding: 5px 9px; border-radius: 5px; font-family: 'Courier New', monospace; font-size: 12px; }
+      .members { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid #daddd4; border-left: 1px solid #daddd4; }
+      .members li { min-height: 132px; border-right: 1px solid #daddd4; border-bottom: 1px solid #daddd4; padding: 23px 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; transition: background .2s ease; }
+      .members li:hover { background: #edf1e5; }
+      .number { color: #777e70; font-size: 12px; font-family: 'Courier New', monospace; }
+      .name { font-size: clamp(22px, 2.3vw, 30px); font-weight: 500; letter-spacing: -.035em; overflow-wrap: anywhere; }
+      footer { padding: 22px 0 28px; border-top: 1px solid #daddd4; display: flex; justify-content: space-between; gap: 20px; color: #687060; font-size: 13px; }
+      footer span:last-child { color: #191b18; }
+      @media (min-width: 1500px) { main { display: flex; flex-direction: column; justify-content: center; } }
+      @media (max-width: 800px) {
+        .page { width: calc(100% - 48px); }
+        main { padding: 56px 0; }
+        .intro { flex-direction: column; align-items: flex-start; gap: 28px; margin-bottom: 44px; }
+        .tagline { max-width: none; font-size: 18px; }
+        .members { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .members li { min-height: 122px; }
+        .name { font-size: 26px; }
+      }
+      @media (max-width: 380px) {
+        .page { width: calc(100% - 32px); }
+        header { padding: 24px 0; }
+        header .label { font-size: 12px; letter-spacing: 0; }
+        h1 { font-size: 23vw; }
+        .members li { padding: 20px 16px; }
+        .name { font-size: 23px; }
+      }
+      @media (prefers-reduced-motion: reduce) { .members li { transition: none; } }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="brand">dbcr.si</div>
+        <div class="label">A circle of eight</div>
+      </header>
+      <main>
+        <div class="intro">
+          <h1>dbcr<span>.si</span></h1>
+          <p class="tagline">Eight people.<br />One group.</p>
+        </div>
+        <section aria-labelledby="members-heading">
+          <div class="section-heading">
+            <h2 id="members-heading">The members</h2>
+            <span class="count" aria-label="8 members">08</span>
+          </div>
+          <ol class="members">
+            <li class="playable"><button class="member-button" data-game="harshit" aria-haspopup="dialog" aria-label="Harshit: hold to open clicks per second test"><span class="number" aria-hidden="true">01</span><span class="name">Harshit</span><span class="game-label">Clicks per second</span></button></li>
+            <li class="playable"><button class="member-button" data-game="ishan" aria-haspopup="dialog" aria-label="Ishan: hold to open typing speed test"><span class="number" aria-hidden="true">02</span><span class="name">Ishan</span><span class="game-label">Typing speed</span></button></li>
+            <li class="playable"><button class="member-button" data-game="naman" aria-haspopup="dialog" aria-label="Naman: hold to open personality quiz"><span class="number" aria-hidden="true">03</span><span class="name">Naman</span><span class="game-label">Personality quiz</span></button></li>
+            <li><span class="number" aria-hidden="true">04</span><span class="name">Parth</span><span class="game-label">Game coming soon</span></li>
+            <li class="playable"><button class="member-button" data-game="shiven" aria-haspopup="dialog" aria-label="Shiven: hold to open reaction time test"><span class="number" aria-hidden="true">05</span><span class="name">Shiven</span><span class="game-label">Reaction time</span></button></li>
+            <li class="playable"><button class="member-button" data-game="shubh" aria-haspopup="dialog" aria-label="Shubh: hold to open hidden country game"><span class="number" aria-hidden="true">06</span><span class="name">Shubh</span><span class="game-label">Hidden country</span></button></li>
+            <li class="playable"><button class="member-button" data-game="somil" aria-haspopup="dialog" aria-label="Somil: hold to open platform jumping game"><span class="number" aria-hidden="true">07</span><span class="name">Somil</span><span class="game-label">Platform jump</span></button></li>
+            <li class="playable"><button class="member-button" data-game="vinayak" aria-haspopup="dialog" aria-label="Vinayak: hold to open randomized Sudoku"><span class="number" aria-hidden="true">08</span><span class="name">Vinayak</span><span class="game-label">Sudoku</span></button></li>
+          </ol>
+          <p class="hold-hint">Hold a name to play. On a keyboard, focus the name and press Enter.</p>
+        </section>
+      </main>
+      <footer><span>Eight names. One place.</span><span>dbcr.si</span></footer>
+    </div>
+    <dialog id="game-dialog" aria-labelledby="game-title">
+      <div class="game-header"><div><p id="game-owner" class="eyebrow"></p><h2 id="game-title"></h2></div><button id="close-game" class="quiet-button" aria-label="Close game">Close</button></div>
+      <div id="game-content"></div>
+      <div class="game-footer"><button id="restart-game" class="quiet-button">Restart game</button><span>dbcr.si / play</span></div>
+    </dialog>
+  </body>
+</html>
